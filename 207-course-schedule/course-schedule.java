@@ -14,7 +14,6 @@ class Solution {
             }
         }
 
-        // Step 3: Add nodes with 0 indegree to queue
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < numCourses; i++) {
             if (indegree[i] == 0) {
@@ -22,7 +21,6 @@ class Solution {
             }
         }
 
-        // Step 4: Perform Kahn's algorithm
         List<Integer> ans = new ArrayList<>();
         while (!q.isEmpty()) {
             int curr = q.poll();
